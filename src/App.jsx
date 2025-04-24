@@ -1,0 +1,36 @@
+import { useState } from "react"
+import { Routes, Route } from "react-router-dom"
+import Navbar from './components/navbar'
+import Sidebar from './components/sidebar'
+import Form from './components/form'
+import HistoryForm from './components/historyForm'
+import './assets/css/App.css'
+function App() {
+  const [notes, setNotes] = useState([]);
+  const [editingNote, setEditingNote] = useState(null); // Untuk edit dari History
+
+  return (
+    <>
+      <Navbar />
+      <Sidebar />
+      <Routes>
+        <Route path="/form" element={
+          <Form 
+            notes={notes} 
+            setNotes={setNotes} 
+            editingNote={editingNote}
+            setEditingNote={setEditingNote}
+          />
+        } />
+        <Route path="/history" element={
+          <HistoryForm 
+            notes={notes}
+            setEditingNote={setEditingNote}
+          />
+        } />
+      </Routes>
+    </>
+  )
+}
+
+export default App

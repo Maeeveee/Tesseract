@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from './components/navbar';
 import Sidebar from './components/sidebar';
 import Form from './components/form';
+import Music from "./components/music";
 import HistoryForm from './components/historyForm';
 import './assets/css/App.css';
 
@@ -23,6 +24,7 @@ function App() {
       <Navbar />
       <Sidebar />
       <Routes>
+        <Route path="/music" element={<Music />} />
         <Route path="/form" element={
           <Form 
             notes={notes} 

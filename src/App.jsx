@@ -1,13 +1,22 @@
-import { useState } from "react"
-import { Routes, Route } from "react-router-dom"
-import Navbar from './components/navbar'
-import Sidebar from './components/sidebar'
-import Form from './components/form'
-import HistoryForm from './components/historyForm'
-import './assets/css/App.css'
+import { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+import Navbar from './components/navbar';
+import Sidebar from './components/sidebar';
+import Form from './components/form';
+import HistoryForm from './components/historyForm';
+import './assets/css/App.css';
+
 function App() {
-  const [notes, setNotes] = useState([]);
-  const [editingNote, setEditingNote] = useState(null); // Untuk edit dari History
+  const [notes, setNotes] = useState(() => {
+    const savedNotes = localStorage.getItem('notes');
+    return savedNotes ? JSON.parse(savedNotes) : [];
+  });
+
+  const [editingNote, setEditingNote] = useState(null);
+
+  useEffect(() => {
+    localStorage.setItem('notes', JSON.stringify(notes));
+  }, [notes]);
 
   return (
     <>
@@ -30,7 +39,7 @@ function App() {
         } />
       </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

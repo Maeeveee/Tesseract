@@ -4,6 +4,7 @@ import Navbar from './components/navbar';
 import Sidebar from './components/sidebar';
 import Form from './components/form';
 import Music from "./components/music";
+import Kanban from "./components/kanban";
 import HistoryForm from './components/historyForm';
 import './assets/css/App.css';
 
@@ -24,6 +25,7 @@ function App() {
       <Navbar />
       <Sidebar />
       <Routes>
+        <Route path="/kanban" element={<Kanban />} />
         <Route path="/music" element={<Music />} />
         <Route path="/form" element={
           <Form 

@@ -111,24 +111,52 @@ export default function Sidebar() {
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                 onClick={() => setIsOpen(false)}
               >
-                <svg 
-                  class="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" 
-                  aria-hidden="true" 
-                  xmlns="http://www.w3.org/2000/svg" 
-                  width="24" 
-                  height="24" 
-                  fill="none" 
+                <svg
+                  class="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
                   viewBox="0 0 24 24"
                 >
-                  <path 
-                    stroke="currentColor" 
-                    stroke-linecap="round" 
-                    stroke-linejoin="round" 
-                    stroke-width="2" 
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                     d="M17 15.5V5s3 1 3 4m-7-3H4m9 4H4m4 4H4m13 2.4c0 1.326-1.343 2.4-3 2.4s-3-1.075-3-2.4 1.343-2.4 3-2.4 3 1.075 3 2.4Z" />
                 </svg>
 
                 <span className="flex-1 ms-3 whitespace-nowrap">Music</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/puzzle"
+                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                onClick={() => setIsOpen(false)}
+              >
+                <svg
+                  class="shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:group-hover:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M11.5 0C10.119 0 9 1.119 9 2.5V4H5C3.895 4 3 4.895 3 6V9C3 9.552 3.448 10 4 10H4.357C5.665 10 6.855 10.941 6.986 12.242C7.136 13.739 5.966 15 4.5 15H4C3.448 15 3 15.448 3 16V19C3 20.105 3.895 21 5 21H8C8.552 21 9 20.552 9 20V19.643C9 18.335 9.941 17.145 11.242 17.014C12.739 16.864 14 18.034 14 19.5V20C14 20.552 14.448 21 15 21H18C19.105 21 20 20.105 20 19V15H21.5C22.881 15 24 13.881 24 12.5C24 11.119 22.881 10 21.5 10H20V6C20 4.895 19.105 4 18 4H14V2.5C14 1.119 12.881 0 11.5 0Z"
+                  />
+                </svg>
+
+
+                <span className="flex-1 ms-3 whitespace-nowrap">puzzle</span>
               </a>
             </li>
           </ul>

@@ -6,6 +6,7 @@ import Form from './components/form';
 import Music from "./components/music";
 import Kanban from "./components/kanban";
 import HistoryForm from './components/historyForm';
+import Sudoku from "./components/sudoku";
 import './assets/css/App.css';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
       <Routes>
         <Route path="/kanban" element={<Kanban />} />
         <Route path="/music" element={<Music />} />
+        <Route path="/puzzle" element={<Sudoku />} />
         <Route path="/form" element={
           <Form 
             notes={notes} 

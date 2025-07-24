@@ -4,7 +4,6 @@ export default function ProjectSection() {
             <div className="p-6">
                 <h1 className="text-4xl text-white font-bold mb-4">My Projects</h1>
                 <p className="text-xl text-gray-400 indent-8">Here you can find a showcase of my work as a <span className="font-semibold text-gray-200">Raja React</span>.</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
                     <div className="scale-[0.85] origin-top-left w-[117.6%] h-[117.6%]">
                         <iframe
                             src="https://kalku-fit.vercel.app"
@@ -13,6 +12,7 @@ export default function ProjectSection() {
                             className="border-none"
                         ></iframe>
                     </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
                     <iframe
                         src="https://kalku-fit.vercel.app/"
                         title="Kalku Fit"

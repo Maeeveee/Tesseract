@@ -7,7 +7,7 @@ export default function ProjectSection() {
                 <iframe
                     src="https://kalku-fit.vercel.app/"
                     title="Kalku Fit"
-                    className="w-full h-full rounded-lg border"
+                    className="w-80 h-56 rounded-lg border shadow-md"
                     allowFullScreen
                 />
             </div>

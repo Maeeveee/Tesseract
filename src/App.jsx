@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from './components/navbar';
 import Sidebar from './components/sidebar';
+import Dashboard from './components/dashboard';
 import Form from './components/form';
 import Music from "./components/music";
 import Kanban from "./components/kanban";
@@ -26,6 +27,7 @@ function App() {
       <Navbar />
       <Sidebar />
       <Routes>
+        <Route path="/" element={<Dashboard />} />
         <Route path="/kanban" element={<Kanban />} />
         <Route path="/music" element={<Music />} />
         <Route path="/puzzle" element={<Sudoku />} />

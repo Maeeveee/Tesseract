@@ -15,7 +15,7 @@ export default function Dashboard() {
                         handle="Maeve"
                         status="Online"
                         contactText="Contact Me"
-                        avatarUrl="../../public/avatar.png"
+                        avatarUrl="/avatar.png"
                         showUserInfo={true}
                         enableTilt={true}
                         enableMobileTilt={false}

@@ -9,7 +9,7 @@ export default function Dashboard() {
             <div className="border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
                 <div className='flex flex-row'>
                     <div className="flex justify-start items-start my-7 ml-7" style={{ overflow: 'visible' }}>
-                    {/* <ProfileCard
+                    <ProfileCard
                         name="Rizal Abrar Fahmi"
                         title="Raja React"
                         handle="Maeve"
@@ -21,7 +21,7 @@ export default function Dashboard() {
                         enableMobileTilt={false}
                         onContactClick={() => console.log('Contact clicked')}
                         className="pc-card--small" 
-                    /> */}
+                    />
                 </div>
                 <div className='flex-1 flex flex-col items-center justify-center my-7'>
                     <h1 className="text-4xl font-bold text-amber-50 text-center mb-4">Wassup Bro</h1>

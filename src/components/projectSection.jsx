@@ -29,6 +29,19 @@ export default function ProjectSection() {
                     </div>
                 </div>
 
+                <div className="border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-8">
+                    <h2 className="text-2xl text-white font-bold p-4">The Sacred Timeline</h2>
+                    <div className="scale-[0.85] origin-top-left w-[117.6%] h-[117.6%]">
+                        <iframe
+                            src="https://the-sacred-timeline.vercel.app/"
+                            width="100%"
+                            height="800"
+                            className="border-none"
+                        ></iframe>
+                        <div className="absolute inset-0 backdrop-blur-md bg-white/10 pointer-events-none"></div>
+                    </div>
+                </div>
+
 
             </div>
         </div>

@@ -6,7 +6,7 @@ export default function ProjectSection() {
                 <p className="text-xl text-gray-400 indent-8">Here you can find a showcase of my work as a <span className="font-semibold text-gray-200">Raja React</span>.</p>
 
                 <div className="border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-8">
-                    <h2 className="text-2xl text-white font-bold p-4">Tesseract</h2>
+                    <h2 className="text-2xl text-white font-bold p-4">Tesseract <span className="text-xs font-bold text-gray-500">(this one is loaded by itself)</span></h2>
                     <div className="scale-[0.85] origin-top-left w-[117.6%] h-[117.6%]">
                         <iframe
                             src="https://Tesseract-maeve.vercel.app"
@@ -18,7 +18,7 @@ export default function ProjectSection() {
                 </div>
 
                 <div className="border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-8">
-                    <h2 className="text-2xl text-white font-bold p-4">Kalku Fit</h2>
+                    <h2 className="text-2xl text-white font-bold p-4">Kalku Fit <span className="text-xs font-bold text-gray-500">(to calculate ur calories)</span></h2>
                     <div className="scale-[0.85] origin-top-left w-[117.6%] h-[117.6%]">
                         <iframe
                             src="https://kalku-fit.vercel.app"
@@ -30,7 +30,7 @@ export default function ProjectSection() {
                 </div>
 
                 <div className="border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-8">
-                    <h2 className="text-2xl text-white font-bold p-4">The Sacred Timeline</h2>
+                    <h2 className="text-2xl text-white font-bold p-4">The Sacred Timeline <span className="text-xs font-bold text-gray-500">(this one is classified, i cant tell u)</span></h2>
                     <div className="scale-[0.85] origin-top-left w-[117.6%] h-[117.6%]">
                         <iframe
                             src="https://the-sacred-timeline.vercel.app/"

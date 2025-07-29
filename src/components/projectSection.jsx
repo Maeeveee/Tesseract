@@ -2,13 +2,13 @@ export default function ProjectSection() {
     const projects = [
         {
             title: "Tesseract",
-            desc: "u have been here",
+            desc: "you’ve been here before, haven’t you?",
             url: "https://Tesseract-maeve.vercel.app",
             stacks: ["/vite.svg", "/react.svg" ,"/tailwind.svg"],
         },
         {
             title: "Kalku Fit",
-            desc: "to calculate ur calories",
+            desc: "a simple calorie calculator for your daily needs",
             url: "https://kalku-fit.vercel.app",
             stacks: ["/vite.svg", "/react.svg" ,"/tailwind.svg"],
         },
@@ -20,19 +20,19 @@ export default function ProjectSection() {
         },
         {
             title: "kertas Batu Gunting",
-            desc: "i made this when i have spare time on my intern",
+            desc: "built this during some free time at my internship",
             url: "https://kertasbatugunting.vercel.app",
             stacks: ["/vite.svg", "/react.svg" ,"/tailwind.svg"],
         },
         {
             title: "Splendor",
-            desc: "i cant find the simplest one on internet, so i made it myself",
+            desc: "couldn’t find a simple version online, so I built one myself",
             url: "https://tempatkamulatihan.vercel.app",
             stacks: ["/react.svg", "/whiteNext.png", "/tailwind.svg"],
         },
         {
             title: "Turen Indah Bangunan",
-            desc: "My intern project, that i proud of",
+            desc: "an intern project I’m proud of, a catalog system for a local building store",
             url: "https://turen-indah-bangunan.vercel.app",
             stacks: ["/vite.svg", "/react.svg" ,"/tailwind.svg", "/supabase.svg"],
         },

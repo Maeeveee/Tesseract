@@ -59,34 +59,36 @@ export default function ProjectSection() {
                                 href={project.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group block border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 bg-white/10 dark:bg-gray-800/40 p-6 transition-all duration-200 hover:scale-105 hover:shadow-xl hover:border-blue-400"
+                                className="group flex flex-col justify-between border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 bg-white/10 dark:bg-gray-800/40 p-6 transition-all duration-200 hover:scale-105 hover:shadow-xl hover:border-blue-400"
                             >
-                                <div className="flex items-center justify-between mb-2">
-                                    <h2 className="text-xl font-bold text-white group-hover:text-blue-400 transition">{project.title}</h2>
-                                    <div className="flex gap-1 ml-2">
-                                        {project.stacks?.map((icon, i) =>
-                                            typeof icon === "string" && icon.startsWith("/") ? (
-                                                <img
-                                                    key={i}
-                                                    src={icon}
-                                                    alt=""
-                                                    className="w-5 h-5 object-contain"
-                                                />
-                                            ) : (
-                                                <span key={i} className="text-xl">{icon}</span>
-                                            )
-                                        )}
+                                <div>
+                                    <div className="flex items-center justify-between mb-2">
+                                        <h2 className="text-xl font-bold text-white group-hover:text-blue-400 transition">{project.title}</h2>
+                                        <div className="flex gap-1 ml-2">
+                                            {project.stacks?.map((icon, i) =>
+                                                typeof icon === "string" && icon.startsWith("/") ? (
+                                                    <img
+                                                        key={i}
+                                                        src={icon}
+                                                        alt=""
+                                                        className="w-5 h-5 object-contain"
+                                                    />
+                                                ) : (
+                                                    <span key={i} className="text-xl">{icon}</span>
+                                                )
+                                            )}
+                                        </div>
                                     </div>
+                                    <p className="text-sm text-gray-400">{project.desc}</p>
                                 </div>
-                                <p className="text-sm text-gray-400">{project.desc}</p>
-                                <span className="inline-block mt-4 text-blue-400 font-semibold">
+                                <span className="inline-block mt-auto pt-4 text-blue-400 font-semibold">
                                     Visit Project &rarr;
                                 </span>
                             </a>
                         ) : (
                             <div
                                 key={idx}
-                                className="relative group block border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 bg-white/10 dark:bg-gray-800/40 p-6 opacity-80 cursor-not-allowed overflow-hidden transition-all duration-200 hover:bg-red-900/30"
+                                className="relative group flex flex-col justify-between border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 bg-white/10 dark:bg-gray-800/40 p-6 opacity-80 cursor-not-allowed overflow-hidden transition-all duration-200 hover:bg-red-900/30"
                             >
                                 {/* Animasi silang */}
                                 <span className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -95,25 +97,27 @@ export default function ProjectSection() {
                                         <line x1="36" y1="12" x2="12" y2="36" stroke="currentColor" strokeWidth="4" strokeLinecap="round"/>
                                     </svg>
                                 </span>
-                                <div className="flex items-center justify-between mb-2">
-                                    <h2 className="text-xl font-bold text-white transition">{project.title}</h2>
-                                    <div className="flex gap-1 ml-2">
-                                        {project.stacks?.map((icon, i) =>
-                                            typeof icon === "string" && icon.startsWith("/") ? (
-                                                <img
-                                                    key={i}
-                                                    src={icon}
-                                                    alt=""
-                                                    className="w-5 h-5 object-contain"
-                                                />
-                                            ) : (
-                                                <span key={i} className="text-xl">{icon}</span>
-                                            )
-                                        )}
+                                <div>
+                                    <div className="flex items-center justify-between mb-2">
+                                        <h2 className="text-xl font-bold text-white transition">{project.title}</h2>
+                                        <div className="flex gap-1 ml-2">
+                                            {project.stacks?.map((icon, i) =>
+                                                typeof icon === "string" && icon.startsWith("/") ? (
+                                                    <img
+                                                        key={i}
+                                                        src={icon}
+                                                        alt=""
+                                                        className="w-5 h-5 object-contain"
+                                                    />
+                                                ) : (
+                                                    <span key={i} className="text-xl">{icon}</span>
+                                                )
+                                            )}
+                                        </div>
                                     </div>
+                                    <p className="text-sm text-gray-400">{project.desc}</p>
                                 </div>
-                                <p className="text-sm text-gray-400">{project.desc}</p>
-                                <span className="inline-block mt-4 text-red-400 font-semibold">
+                                <span className="inline-block mt-auto pt-4 text-red-400 font-semibold">
                                     Classified
                                 </span>
                             </div>

@@ -16,7 +16,7 @@ export default function ProjectSection() {
             title: "Undangan",
             desc: "try to ask ur friend hangout with this",
             url: "https://undangan-buat-kamu.vercel.app",
-            stacks: ["/react.svg", "/next.svg", "/tailwind.svg"],
+            stacks: ["/react.svg", "/whiteNext.png", "/tailwind.svg"],
         },
         {
             title: "kertas Batu Gunting",
@@ -28,7 +28,7 @@ export default function ProjectSection() {
             title: "Splendor",
             desc: "i cant find the simplest one on internet, so i made it myself",
             url: "https://tempatkamulatihan.vercel.app",
-            stacks: ["/react.svg", "/next.svg", "/tailwind.svg"],
+            stacks: ["/react.svg", "/whiteNext.png", "/tailwind.svg"],
         },
         {
             title: "Turen Indah Bangunan",

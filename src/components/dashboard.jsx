@@ -20,7 +20,7 @@ export default function Dashboard() {
                             showUserInfo={true}
                             enableTilt={true}
                             enableMobileTilt={false}
-                            onContactClick={() => console.log('Contact clicked')}
+                            onContactClick={() => window.open('https://www.linkedin.com/in/rizalabrar/')}
                             className="pc-card--small"
                         />
                     </div>
@@ -30,7 +30,7 @@ export default function Dashboard() {
                             through this website i want to show u my <span className='underline text-gray-200'>grand</span> <span className='underline text-gray-200'> design</span>. which is a <span className='underline text-gray-200'>portofolio</span> and also a <span className='underline text-gray-200'>kanban</span> and also a <span className='underline text-gray-200'>notes</span> and also a <span className='underline text-gray-200'>playlist</span> and also a <span className='underline text-gray-200'>game</span> . And i want to share all my project i have done here.
                         </p>
                     </div>
-                <span className='hidden lg:flex items-end justify-end text-gray-400 m-4'>look down there</span>
+                    <span className='hidden lg:flex items-end justify-end text-gray-400 m-4'>look down there</span>
                 </div>
             </div>
             <IntroSection />

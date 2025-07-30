@@ -30,7 +30,7 @@ export default function ExperienceSection() {
                 </svg>
             ),
             title: "Freelance & Projects",
-            desc: "Building CendekiaUM (carried by rio)",
+            desc: "Building CendekiaUM (carried by rio) - Frontend Developer",
             period: "2024",
             github: "https://github.com/ckckckcz",
         },

@@ -3,6 +3,7 @@ import IntroSection from './introSection'
 import ProjectSection from './projectSection'
 import ExperienceSection from './experienceSection'
 import ContactSection from './contactSection'
+import GameSection from './gameSection'
 
 export default function Dashboard() {
 
@@ -38,6 +39,7 @@ export default function Dashboard() {
             <ExperienceSection />
             <ProjectSection />
             <ContactSection />
+            <GameSection />
         </section >
     )
 }

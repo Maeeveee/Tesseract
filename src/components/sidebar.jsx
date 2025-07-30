@@ -32,6 +32,15 @@ export default function Sidebar() {
         </svg>
       </button>
 
+      {/* Overlay for mobile, only when sidebar open */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 z-30 sm:hidden"
+          onClick={toggleSidebar}
+          aria-label="Close sidebar overlay"
+        />
+      )}
+
       {/* Sidebar */}
       <aside
         id="logo-sidebar"

@@ -110,7 +110,7 @@ export default function Kanban() {
     <section className="p-4 sm:ml-64">
       <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-2xl font-semibold text-white mb-4">Kanban</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">Kanban</h2>
         </div>
         <div className="container mx-auto">
           {/* Form untuk menambah task */}
@@ -134,8 +134,8 @@ export default function Kanban() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {Object.values(columns).map((column) => (
               <div key={column.id} className="border-2 border-gray-700 border-dashed rounded-lg shadow-md">
-                <div className="text-gray-200 p-4 border-b-2 border-gray-700 border-dashed rounded-lg">
-                  <h5 className="font-bold text-lg">{column.title}</h5>
+                <div className="text-gray-200 p-4 border-b-2 bg-gray-800 border-gray-700 border-dashed rounded-lg">
+                  <h5 className="font-bold text-lg ">{column.title}</h5>
                 </div>
                 <div className="p-4 min-h-[200px]">
                   {column.tasks.map((task) => (

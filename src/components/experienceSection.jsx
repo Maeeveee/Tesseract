@@ -49,7 +49,10 @@ export default function ExperienceSection() {
     return (
         <section className="border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
             <div className="p-6">
-                <h2 className="text-3xl font-bold text-white mb-8">Experience & Journey</h2>
+                <h2 className="text-4xl text-white font-bold mb-4">Experience & Journey</h2>
+                <p className="text-md lg:text-xl text-gray-400 mb-8">
+                    The journey of <span className="font-semibold text-gray-200">Raja React</span>.
+                </p>
                 <ol className="relative border-s ml-4 border-gray-700">
                     {steps.map((step, idx) => (
                         <li key={idx} className="mb-10 ms-6">

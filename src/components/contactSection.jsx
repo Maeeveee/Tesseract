@@ -44,7 +44,7 @@ export default function ContactSection() {
                     </g>
                 </svg>
             ),
-            badge: "rizal abrar fahmi",
+            badge: "Rizal Abrar Fahmi",
             hover: "hover:border-blue-300 hover:text-blue-300"
         },
         {

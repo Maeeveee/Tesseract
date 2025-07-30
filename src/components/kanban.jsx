@@ -117,7 +117,7 @@ export default function Kanban() {
           <form onSubmit={addTask} className="mb-6 flex gap-2">
             <input
               type="text"
-              className="flex-1 border border-gray-700 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-gray-700 text-sky-50"
+              className="flex-1 border border-gray-700 rounded-xl p-2 focus:outline-none focus:ring-2 focus:ring-gray-700 text-sky-50"
               placeholder="Add new task"
               value={newTask}
               onChange={(e) => setNewTask(e.target.value)}

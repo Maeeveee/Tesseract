@@ -2,21 +2,36 @@ export default function GameSection() {
     const games = [
         {
             name: "Elden Ring",
-            image: "https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg",
+            image: "https://i.pinimg.com/1200x/61/f6/73/61f673cc38d2c9d1feef884ed61b3027.jpg",
             platform: "Steam",
-            hours: 120,
-            impression: "Open world yang luas, boss fight menantang, grafis memukau!",
-            rating: 5 // rating maksimal 5
+            hours: 100,
+            impression: "The most perfect game ever made, a masterpiece of open-world design. miss malenia",
+            rating: 5
         },
         {
+            name: "Sekiro: Shadows Die Twice",
+            image: "https://i.pinimg.com/736x/2e/b2/63/2eb26377f1a06cc9b489aaed07446f82.jpg",
+            platform: "Steam",
+            hours: 90,
+            impression: "GOATTT, the first souls-like game I played, and it was amazing.",
+            rating: 5
+        },
+        {
+            name: "Warcraft III Reforged",
+            image: "https://i.pinimg.com/1200x/46/bf/35/46bf35c90e04be3487e16c1c484bff85.jpg",
+            platform: "Blizzard",
+            hours: 200,
+            impression: "Goooddd remaster, bring back the nostalgia of my childhood",
+            rating: 5
+        },
+                {
             name: "Valorant",
-            image: "https://upload.wikimedia.org/wikipedia/en/5/5f/Valorant_logo.png",
+            image: "https://i.pinimg.com/1200x/39/dd/4d/39dd4da08ecccc0159d79598365e995e.jpg",
             platform: "Riot",
             hours: 300,
-            impression: "FPS kompetitif, teamwork penting, seru bareng teman.",
+            impression: "the most harmful game, but if you play it with friends, it can be harmless",
             rating: 4
         },
-        // Tambahkan game lain di sini
     ];
 
     return (

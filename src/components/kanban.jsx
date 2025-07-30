@@ -134,7 +134,7 @@ export default function Kanban() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {Object.values(columns).map((column) => (
               <div key={column.id} className="border-2 border-gray-700 border-dashed rounded-lg shadow-md">
-                <div className="text-gray-200 p-4 border-b-2 bg-gray-800 border-gray-700 border-dashed rounded-lg">
+                <div className="text-gray-200 p-4 border-b-2 bg-gray-800/60 border-gray-700 border-dashed rounded-lg">
                   <h5 className="font-bold text-lg ">{column.title}</h5>
                 </div>
                 <div className="p-4 min-h-[200px]">

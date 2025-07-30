@@ -49,7 +49,7 @@ export default function Form({ notes, setNotes, editingNote, setEditingNote }) {
     }, []);
 
     return (
-        <div className="p-4 sm:ml-64">
+        <section className="p-4 sm:ml-64">
             <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
                 <textarea
                     rows={28}
@@ -73,6 +73,6 @@ export default function Form({ notes, setNotes, editingNote, setEditingNote }) {
                     </button>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

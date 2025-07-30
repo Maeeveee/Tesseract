@@ -6,7 +6,7 @@ import ExperienceSection from './experienceSection'
 export default function Dashboard() {
 
     return (
-        <div className="p-4 sm:ml-64">
+        <section className="p-4 sm:ml-64">
             <div className="border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
                 <div className="flex flex-col md:flex-row">
                     <div className="flex justify-center items-center my-7 md:ml-7 w-full md:w-auto">
@@ -36,6 +36,6 @@ export default function Dashboard() {
             <IntroSection />
             <ExperienceSection />
             <ProjectSection />
-        </div >
+        </section >
     )
 }

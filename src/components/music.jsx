@@ -1,6 +1,6 @@
 export default function Music() {
     return (
-        <div className="p-4 sm:ml-64 ">
+        <section className="p-4 sm:ml-64 ">
             <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
                 <iframe
                     style={{ borderRadius: '12px' }}
@@ -12,6 +12,6 @@ export default function Music() {
                     loading="lazy">
                 </iframe>
             </div>
-        </div>
+        </section>
     )
 }

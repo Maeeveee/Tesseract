@@ -1,6 +1,7 @@
 import ProfileCard from './profileCard'
 import IntroSection from './introSection'
 import ProjectSection from './projectSection'
+import ExperienceSection from './experienceSection'
 
 export default function Dashboard() {
 
@@ -33,6 +34,7 @@ export default function Dashboard() {
                 </div>
             </div>
             <IntroSection />
+            <ExperienceSection />
             <ProjectSection />
         </div >
     )

@@ -26,7 +26,7 @@ export default function GameSection() {
                 <p className="text-md lg:text-xl text-gray-400 mb-8">
                     Game played by <span className="font-semibold text-gray-200">Raja React</span>.
                 </p>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <ul className="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {games.map((game, i) => (
                         <li
                             key={i}
@@ -34,7 +34,7 @@ export default function GameSection() {
                         >
                             <img src={game.image} alt={game.name} className="w-24 h-24 object-cover rounded mb-2" />
                             <span className="font-semibold text-white mb-2">{game.name}</span>
-                            <div className="grid grid-cols-2 w-full mb-1">
+                            <div className="grid grid-cols-2 w-full mb-1 gap-y-1">
                                 <div className="flex flex-col items-center">
                                     <span className="text-xs text-gray-400">Play Hour</span>
                                     <span className="text-xs text-gray-300">{game.hours}h</span>
@@ -47,7 +47,7 @@ export default function GameSection() {
                                     </span>
                                 </div>
                             </div>
-                            <span className="text-xs text-gray-300 italic mt-2 text-center">{game.impression}</span>
+                            <span className="hidden lg:block md:block text-xs text-gray-300 italic mt-2 text-center">{game.impression}</span>
                         </li>
                     ))}
                 </ul>

@@ -51,7 +51,7 @@ export default function ProjectSection() {
                 <p className="text-md lg:text-xl text-gray-400 mb-8">
                     Here you can find a showcase of my work as a <span className="font-semibold text-gray-200">Raja React</span>.
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {projects.map((project, idx) =>
                         project.url ? (
                             <a

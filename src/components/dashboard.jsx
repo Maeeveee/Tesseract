@@ -26,7 +26,7 @@ export default function Dashboard() {
                     </div>
                     <div className="flex-1 flex flex-col items-center justify-center my-7">
                         <h1 className="text-4xl font-bold text-amber-50 text-center mb-4">Wassup Bro</h1>
-                        <p className="text-gray-400 text-md lg:text-xl text-center md:ml-6 md:text-left p-3 ">
+                        <p className="text-gray-400 text-md lg:text-xl lg:text-center md:ml-6 md:text-left p-3 text-justify">
                             through this website i want to show u my <span className='underline text-gray-200'>grand</span> <span className='underline text-gray-200'> design</span>. which is a <span className='underline text-gray-200'>portofolio</span> and also a <span className='underline text-gray-200'>kanban</span> and also a <span className='underline text-gray-200'>notes</span> and also a <span className='underline text-gray-200'>playlist</span> and also a <span className='underline text-gray-200'>game</span> . And i want to share all my project i have done here.
                         </p>
                     </div>

@@ -112,29 +112,40 @@ export default function GameSection() {
                     Game played by <span className="font-semibold text-gray-200">Raja React</span>.
                 </p>
                 <ul className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    {displayedGames.map((game, i) => (
-                        <li
-                            key={i}
-                            className="bg-white/10 dark:bg-gray-800/40 rounded-xl p-3 flex flex-col items-center border-2 border-dashed border-gray-700 transition-transform duration-200 hover:scale-105 hover:shadow-lg"
-                        >
-                            <img src={game.image} alt={game.name} className="w-24 h-24 object-cover rounded mb-2" />
-                            <span className="font-semibold text-white mb-2 text-center">{game.name}</span>
-                            <div className="grid grid-cols-2 w-full mb-1 gap-y-1">
-                                <div className="flex flex-col items-center">
-                                    <span className="text-xs text-gray-400">Play Hour</span>
-                                    <span className="text-xs text-gray-300">{game.hours}h</span>
+                    {displayedGames.map((game, i) => {
+                        let badgeColor = "bg-blue-600";
+                        if (game.platform === "Steam") badgeColor = "bg-[#1b2838]";
+                        else if (game.platform === "Blizzard") badgeColor = "bg-[#00B4FF]";
+                        else if (game.platform === "Riot") badgeColor = "bg-[#D1363A]";
+                        else badgeColor = "bg-gray-600";
+
+                        return (
+                            <li
+                                key={i}
+                                className="relative bg-white/10 dark:bg-gray-800/40 rounded-xl p-3 flex flex-col items-center border-2 border-dashed border-gray-700 transition-transform duration-200 hover:scale-105 hover:shadow-lg"
+                            >
+                                <span className={`hidden md:inline absolute top-2 right-2 ${badgeColor} text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md select-none`}>
+                                    {game.platform}
+                                </span>
+                                <img src={game.image} alt={game.name} className="w-24 h-24 object-cover rounded mb-2" />
+                                <span className="font-semibold text-white mb-2 text-center">{game.name}</span>
+                                <div className="grid grid-cols-2 w-full mb-1 gap-y-1">
+                                    <div className="flex flex-col items-center">
+                                        <span className="text-xs text-gray-400">Play Hour</span>
+                                        <span className="text-xs text-gray-300">{game.hours}h</span>
+                                    </div>
+                                    <div className="flex flex-col items-center">
+                                        <span className="text-xs text-gray-400">Rating</span>
+                                        <span className="text-xs text-yellow-400">
+                                            {"★".repeat(game.rating)}
+                                            <span className="text-gray-500">{'★'.repeat(5 - game.rating)}</span>
+                                        </span>
+                                    </div>
                                 </div>
-                                <div className="flex flex-col items-center">
-                                    <span className="text-xs text-gray-400">Rating</span>
-                                    <span className="text-xs text-yellow-400">
-                                        {"★".repeat(game.rating)}
-                                        <span className="text-gray-500">{'★'.repeat(5 - game.rating)}</span>
-                                    </span>
-                                </div>
-                            </div>
-                            <span className="hidden lg:block md:block text-xs text-gray-300 italic mt-2 text-center">{game.impression}</span>
-                        </li>
-                    ))}
+                                <span className="hidden lg:block md:block text-xs text-gray-300 italic mt-2 text-center">{game.impression}</span>
+                            </li>
+                        );
+                    })}
                 </ul>
                 {isMobile && showCount < games.length && (
                     <div className="flex justify-center mt-4">

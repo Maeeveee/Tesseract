@@ -101,9 +101,6 @@ export default function GameSection() {
     ];
 
     const [showCount, setShowCount] = useState(6);
-
-    // Cek apakah mobile (opsional, bisa pakai window.innerWidth, tapi di sini cukup untuk grid mobile)
-    // Tampilkan 6 pertama jika di mobile, jika lebih dari 6, tampilkan tombol
     const isMobile = typeof window !== "undefined" && window.innerWidth < 640;
     const displayedGames = isMobile ? games.slice(0, showCount) : games;
 
@@ -139,7 +136,6 @@ export default function GameSection() {
                         </li>
                     ))}
                 </ul>
-                {/* Show More button hanya muncul di mobile dan jika masih ada sisa game */}
                 {isMobile && showCount < games.length && (
                     <div className="flex justify-center mt-4">
                         <button

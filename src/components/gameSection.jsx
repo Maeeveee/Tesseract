@@ -5,7 +5,7 @@ export default function GameSection() {
             image: "https://i.pinimg.com/1200x/61/f6/73/61f673cc38d2c9d1feef884ed61b3027.jpg",
             platform: "Steam",
             hours: 100,
-            impression: "The most perfect game ever made, a masterpiece of open-world design. miss malenia",
+            impression: "The most perfect game ever made, a masterpiece of open-world design. miss u malenia",
             rating: 5
         },
         {
@@ -17,6 +17,14 @@ export default function GameSection() {
             rating: 5
         },
         {
+            name: "Horizon Zero Dawn",
+            image: "https://i.pinimg.com/1200x/5e/bb/76/5ebb763c6a56b927630a1ed1326f0772.jpg",
+            platform: "Steam",
+            hours: 54,
+            impression: "very good story telling and world building, i wish i could play with better devices and i also wanna play the sequel",
+            rating: 5
+        },
+        {
             name: "Warcraft III Reforged",
             image: "https://i.pinimg.com/1200x/46/bf/35/46bf35c90e04be3487e16c1c484bff85.jpg",
             platform: "Blizzard",
@@ -24,12 +32,68 @@ export default function GameSection() {
             impression: "Goooddd remaster, bring back the nostalgia of my childhood",
             rating: 5
         },
-                {
+        {
+            name: "Stardew Valley",
+            image: "https://i.pinimg.com/736x/04/20/b2/0420b2b75dc2ec25bc65b93ab6f9c4ca.jpg",
+            platform: "Steam",
+            hours: 185,
+            impression: "this game has stolen many hours of my life, especially during the two-month break of my college holiday. I will always recommend this game to anyone",
+            rating: 5
+        },
+        {
+            name: "Balatro",
+            image: "https://i.pinimg.com/736x/24/4f/89/244f89128661170dccbdf77881db1103.jpg",
+            platform: "Steam",
+            hours: 56,
+            impression: "most greatest card game ever, the art style is so unique and the gameplay is very fun",
+            rating: 5
+        },
+        {
+            name: "Dead Cells",
+            image: "https://i.pinimg.com/736x/9a/06/c4/9a06c40cbeff77df4e57c0827c9dd804.jpg",
+            platform: "Steam",
+            hours: 70,
+            impression: "best roguelike game ever, the gameplay is so smooth and addictive",
+            rating: 4
+        },
+        {
+            name: "Hades",
+            image: "https://i.pinimg.com/736x/b7/10/29/b71029d7d28e76f40c30102c28c6fa9b.jpg",
+            platform: "Steam",
+            hours: 27,
+            impression: "pretty good roguelike game, i want to play the sequel",
+            rating: 4
+        },
+        {
+            name: "Splendor",
+            image: "https://i.pinimg.com/736x/54/47/95/544795d2f6af6c35197d82f63fd47b89.jpg",
+            platform: "Steam",
+            hours: 12,
+            impression: "this game has become one of my all-time favorite board games. After losing twice in a row to \"someone\", I’m now ready to claim my throne back",
+            rating: 4
+        },
+        {
+            name: "Supermarket Simulator",
+            image: "https://i.pinimg.com/736x/40/9b/5e/409b5e8a180bcb3b6c3fcb8ff003a888.jpg",
+            platform: "Steam",
+            hours: 21,
+            impression: "very like this simulation game, the gameplay is very fun and addictive, i can play this game for hours",
+            rating: 4
+        },
+        {
             name: "Valorant",
             image: "https://i.pinimg.com/1200x/39/dd/4d/39dd4da08ecccc0159d79598365e995e.jpg",
             platform: "Riot",
-            hours: 300,
+            hours: 790,
             impression: "the most harmful game, but if you play it with friends, it can be harmless",
+            rating: 4
+        },
+        {
+            name: "Warframe",
+            image: "https://i.pinimg.com/736x/6b/de/3d/6bde3dd1efb3a7846434161e76bdc27d.jpg",
+            platform: "Steam",
+            hours: 598,
+            impression: "during the pandemic, this game became my friend and helped me heal from something deadly",
             rating: 4
         },
     ];

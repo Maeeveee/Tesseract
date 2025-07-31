@@ -1,3 +1,7 @@
+* {
+  cursor: none !important;
+}
+
 :root {
   --pointer-x: 50%;
   --pointer-y: 50%;

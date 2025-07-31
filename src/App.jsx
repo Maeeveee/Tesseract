@@ -8,7 +8,9 @@ import Music from "./components/music";
 import Kanban from "./components/kanban";
 import HistoryForm from './components/historyForm';
 import Sudoku from "./components/sudoku";
+import CustomCursor from "./components/CustomCursor";
 import './assets/css/App.css';
+
 
 function App() {
   const [notes, setNotes] = useState(() => {
@@ -24,6 +26,7 @@ function App() {
 
   return (
     <>
+    <CustomCursor />
       <Navbar />
       <Sidebar />
       <Routes>

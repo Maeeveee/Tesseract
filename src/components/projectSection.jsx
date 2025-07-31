@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export default function ProjectSection() {
     const projects = [
         {
@@ -44,6 +46,10 @@ export default function ProjectSection() {
         },
     ];
 
+    const [showCount, setShowCount] = useState(3);
+    const isMobile = typeof window !== "undefined" && window.innerWidth < 640;
+    const displayedProjects = isMobile ? projects.slice(0, showCount) : projects;
+
     return (
         <section className="border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
             <div className="p-6">
@@ -52,7 +58,7 @@ export default function ProjectSection() {
                     Here you can find a showcase of my work as a <span className="font-semibold text-gray-200">Raja React</span>.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {projects.map((project, idx) =>
+                    {displayedProjects.map((project, idx) =>
                         project.url ? (
                             <a
                                 key={idx}
@@ -124,6 +130,16 @@ export default function ProjectSection() {
                         )
                     )}
                 </div>
+                {isMobile && showCount < projects.length && (
+                    <div className="flex justify-center mt-4">
+                        <button
+                            className="px-6 py-2 rounded-xl font-semibold border-2 border-gray-700 bg-white/10 dark:bg-gray-600/40 text-gray-300 hover:bg-white/20 hover:dark:bg-gray-800/60 hover:text-white transition-all duration-200"
+                            onClick={() => setShowCount(showCount + 3)}
+                        >
+                            Show More
+                        </button>
+                    </div>
+                )}
             </div>
         </section>
     );

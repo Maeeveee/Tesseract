@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export default function GameSection() {
     const games = [
         {
@@ -98,6 +100,13 @@ export default function GameSection() {
         },
     ];
 
+    const [showCount, setShowCount] = useState(6);
+
+    // Cek apakah mobile (opsional, bisa pakai window.innerWidth, tapi di sini cukup untuk grid mobile)
+    // Tampilkan 6 pertama jika di mobile, jika lebih dari 6, tampilkan tombol
+    const isMobile = typeof window !== "undefined" && window.innerWidth < 640;
+    const displayedGames = isMobile ? games.slice(0, showCount) : games;
+
     return (
         <section className="border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
             <div className="p-6">
@@ -105,14 +114,14 @@ export default function GameSection() {
                 <p className="text-md lg:text-xl text-gray-400 mb-8">
                     Game played by <span className="font-semibold text-gray-200">Raja React</span>.
                 </p>
-                <ul className="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    {games.map((game, i) => (
+                <ul className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    {displayedGames.map((game, i) => (
                         <li
                             key={i}
                             className="bg-white/10 dark:bg-gray-800/40 rounded-xl p-3 flex flex-col items-center border-2 border-dashed border-gray-700 transition-transform duration-200 hover:scale-105 hover:shadow-lg"
                         >
                             <img src={game.image} alt={game.name} className="w-24 h-24 object-cover rounded mb-2" />
-                            <span className="font-semibold text-white mb-2">{game.name}</span>
+                            <span className="font-semibold text-white mb-2 text-center">{game.name}</span>
                             <div className="grid grid-cols-2 w-full mb-1 gap-y-1">
                                 <div className="flex flex-col items-center">
                                     <span className="text-xs text-gray-400">Play Hour</span>
@@ -130,6 +139,17 @@ export default function GameSection() {
                         </li>
                     ))}
                 </ul>
+                {/* Show More button hanya muncul di mobile dan jika masih ada sisa game */}
+                {isMobile && showCount < games.length && (
+                    <div className="flex justify-center mt-4">
+                        <button
+                            className="px-6 py-2 rounded-xl font-semibold border-2 border-gray-700 bg-white/10 dark:bg-gray-600/40 text-gray-300 hover:bg-white/20 hover:dark:bg-gray-600/60 hover:text-white transition-all duration-200"
+                            onClick={() => setShowCount(showCount + 6)}
+                        >
+                            Show More
+                        </button>
+                    </div>
+                )}
             </div>
         </section>
     );

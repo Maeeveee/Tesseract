@@ -9,8 +9,23 @@ export default function CustomCursor() {
   useEffect(() => {
     const cursor = cursorRef.current;
 
+    // Deteksi mobile
+    const isMobile = window.matchMedia("(pointer: coarse)").matches;
+
+    // Jika mobile, sembunyikan kursor custom setelah tap/click
+    function handleMobileHide() {
+      if (isMobile && cursor) {
+        cursor.style.display = "none";
+      }
+    }
+
+    // Jika mobile, sembunyikan kursor dari awal
+    if (isMobile && cursor) {
+      cursor.style.display = "none";
+    }
+
     function moveCursor(e) {
-      // Jika sedang hover ke elemen, clamp posisi kursor di dalam bounding box elemen
+      if (isMobile) return;
       if (activeHoverEl.current) {
         const rect = activeHoverEl.current.getBoundingClientRect();
         const x = Math.max(rect.left, Math.min(e.clientX, rect.right));
@@ -24,6 +39,7 @@ export default function CustomCursor() {
     }
 
     function handleEnter(e) {
+      if (isMobile) return;
       const target = e.target;
       activeHoverEl.current = target;
       const rect = target.getBoundingClientRect();
@@ -35,6 +51,7 @@ export default function CustomCursor() {
     }
 
     function handleLeave() {
+      if (isMobile) return;
       activeHoverEl.current = null;
       cursor.style.width = "15px";
       cursor.style.height = "15px";
@@ -45,6 +62,10 @@ export default function CustomCursor() {
 
     document.addEventListener("mousemove", moveCursor);
 
+    // Sembunyikan kursor custom setelah tap/click di mobile
+    document.addEventListener("touchstart", handleMobileHide);
+    document.addEventListener("click", handleMobileHide);
+
     const hoverables = document.querySelectorAll("button, a, .pc-card, .pc-contact-btn, .select");
     hoverables.forEach(el => {
       el.addEventListener("mouseenter", handleEnter);
@@ -53,6 +74,8 @@ export default function CustomCursor() {
 
     return () => {
       document.removeEventListener("mousemove", moveCursor);
+      document.removeEventListener("touchstart", handleMobileHide);
+      document.removeEventListener("click", handleMobileHide);
       hoverables.forEach(el => {
         el.removeEventListener("mouseenter", handleEnter);
         el.removeEventListener("mouseleave", handleLeave);
@@ -79,6 +102,7 @@ export default function CustomCursor() {
           "width 0.25s cubic-bezier(.4,2,.6,1), height 0.25s cubic-bezier(.4,2,.6,1), border-radius 0.25s cubic-bezier(.4,2,.6,1), background 0.18s, transform 0.25s cubic-bezier(.4,2,.6,1)",
         mixBlendMode: "difference",
         boxShadow: "0 0 12px 2px rgba(255,255,255,0.25), 0 0 0 2px rgba(255,255,255,0.08)",
+        pointerEvents: "none",
       }}
     />
   );

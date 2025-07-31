@@ -76,7 +76,7 @@ export default function ExperienceSection() {
                                                 href={step.github}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="text-blue-400 text-sm underline mb-2"
+                                                className="text-blue-400 text-sm mb-2"
                                             >
                                                 visit his github
                                             </a>

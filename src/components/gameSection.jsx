@@ -122,7 +122,7 @@ export default function GameSection() {
                         return (
                             <li
                                 key={i}
-                                className="relative bg-white/10 dark:bg-gray-800/40 rounded-xl p-3 flex flex-col items-center border-2 border-dashed border-gray-700 transition-transform duration-200 hover:scale-105 hover:shadow-lg"
+                                className="select relative bg-white/10 dark:bg-gray-800/40 rounded-xl p-3 flex flex-col items-center border-2 border-dashed border-gray-700 transition-transform duration-200 hover:scale-105 hover:shadow-lg"
                             >
                                 <span className={`hidden md:inline absolute top-2 right-2 ${badgeColor} text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md select-none`}>
                                     {game.platform}

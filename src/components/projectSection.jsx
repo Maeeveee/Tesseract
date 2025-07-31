@@ -96,8 +96,7 @@ export default function ProjectSection() {
                                 key={idx}
                                 className="relative group flex flex-col justify-between border-2 border-gray-200 border-dashed rounded-lg hover:border-red-500 dark:border-gray-700 bg-white/10 dark:bg-gray-800/40 p-6 opacity-80 cursor-not-allowed overflow-hidden transition-all duration-200 hover:bg-red-900/30"
                             >
-                                {/* Animasi silang */}
-                                <span className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+=                                <span className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <svg width="48" height="48" viewBox="0 0 48 48" className="text-red-500" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <line x1="12" y1="12" x2="36" y2="36" stroke="currentColor" strokeWidth="4" strokeLinecap="round"/>
                                         <line x1="36" y1="12" x2="12" y2="36" stroke="currentColor" strokeWidth="4" strokeLinecap="round"/>

@@ -94,7 +94,7 @@ export default function CustomCursor() {
         height: 15,
         borderRadius: "50%",
         background: "rgba(255,255,255,0.2)",
-        border: "1.5px solid #fff",
+        border: "2px solid #fff",
         zIndex: 9999,
         transform: "translate(-50%, -50%)",
         transition:

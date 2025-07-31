@@ -8,7 +8,7 @@ import Music from "./components/music";
 import Kanban from "./components/kanban";
 import HistoryForm from './components/historyForm';
 import Sudoku from "./components/sudoku";
-import CustomCursor from "./components/CustomCursor";
+import CustomCursor from './components/customCursor';
 import './assets/css/App.css';
 
 

@@ -44,7 +44,7 @@ export default function Sidebar() {
       {/* Sidebar */}
       <aside
         id="logo-sidebar"
-        className={`fixed top-0 left-0 z-40 w-[50%] h-screen pt-20 transition-transform bg-[#000000] sm:translate-x-0 ${isOpen ? "translate-x-0" : "-translate-x-full"
+        className={`fixed top-0 left-0 z-40 w-[50%] md:w-64 lg:w-64 h-screen pt-20 transition-transform bg-[#000000] sm:translate-x-0 ${isOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         aria-label="Sidebar"
       >

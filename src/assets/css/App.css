@@ -2,11 +2,16 @@
 
 body {
     background-color: black;
+    cursor: none !important;
 }
 
 *::selection {
     background: white;
     color: black;
+}
+
+iframe, video {
+    cursor: none !important;
 }
 
 * {

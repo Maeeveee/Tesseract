@@ -8,3 +8,7 @@ body {
     background: white;
     color: black;
 }
+
+* {
+    cursor: none !important;
+}

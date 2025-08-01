@@ -26,6 +26,7 @@ export default function CustomCursor() {
 
   useEffect(() => {
     const cursor = cursorRef.current;
+    const isMobile = window.matchMedia("(pointer: coarse)").matches; // Deteksi perangkat mobile
 
     function moveCursor(e) {
       const s = state.current;
@@ -108,12 +109,27 @@ export default function CustomCursor() {
       el.addEventListener("mouseleave", handleLeave);
     });
 
+    function handleMobileHide() {
+      if (isMobile && cursor) {
+        cursor.style.display = "none"; // Sembunyikan kursor di perangkat mobile
+      }
+    }
+
+    if (isMobile && cursor) {
+      cursor.style.display = "none"; // Sembunyikan kursor saat pertama kali dimuat
+    }
+
+    document.addEventListener("touchstart", handleMobileHide); // Sembunyikan saat klik di mobile
+    document.addEventListener("click", handleMobileHide); // Tambahkan untuk klik biasa
+
     return () => {
       document.removeEventListener("mousemove", moveCursor);
       hoverables.forEach((el) => {
         el.removeEventListener("mouseenter", handleEnter);
         el.removeEventListener("mouseleave", handleLeave);
       });
+      document.removeEventListener("touchstart", handleMobileHide);
+      document.removeEventListener("click", handleMobileHide);
     };
   }, [location]);
 

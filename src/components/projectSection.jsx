@@ -102,15 +102,41 @@ export default function ProjectSection() {
                                 key={idx}
                                 className="relative group flex flex-col justify-between border-2 border-gray-200 border-dashed rounded-lg hover:border-red-500 dark:border-gray-700 bg-white/10 dark:bg-gray-800/40 p-6 opacity-80 cursor-not-allowed overflow-hidden transition-all duration-200 hover:bg-red-900/30"
                             >
-=                                <span className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <svg width="48" height="48" viewBox="0 0 48 48" className="text-red-500" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <line x1="12" y1="12" x2="36" y2="36" stroke="currentColor" strokeWidth="4" strokeLinecap="round"/>
-                                        <line x1="36" y1="12" x2="12" y2="36" stroke="currentColor" strokeWidth="4" strokeLinecap="round"/>
+                                {/* SVG Tumpuk */}
+                                <span className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                                    <svg
+                                        width="48"
+                                        height="48"
+                                        viewBox="0 0 48 48"
+                                        className="text-red-500"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <line
+                                            x1="12"
+                                            y1="12"
+                                            x2="36"
+                                            y2="36"
+                                            stroke="currentColor"
+                                            strokeWidth="4"
+                                            strokeLinecap="round"
+                                        />
+                                        <line
+                                            x1="36"
+                                            y1="12"
+                                            x2="12"
+                                            y2="36"
+                                            stroke="currentColor"
+                                            strokeWidth="4"
+                                            strokeLinecap="round"
+                                        />
                                     </svg>
                                 </span>
-                                <div>
+
+                                {/* Isi Card */}
+                                <div className="z-0">
                                     <div className="flex items-center justify-between mb-2">
-                                        <h2 className="text-xl font-bold text-white transition">{project.title}</h2>
+                                        <h2 className="text-xl font-bold text-white transition mb-0">{project.title}</h2>
                                         <div className="flex gap-1 ml-2">
                                             {project.stacks?.map((icon, i) =>
                                                 typeof icon === "string" && icon.startsWith("/") ? (
@@ -128,6 +154,8 @@ export default function ProjectSection() {
                                     </div>
                                     <p className="text-sm text-gray-400">{project.desc}</p>
                                 </div>
+
+                                {/* Footer */}
                                 <span className="inline-block mt-auto pt-4 text-red-400 font-semibold">
                                     Classified
                                 </span>

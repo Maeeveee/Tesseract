@@ -9,10 +9,22 @@ export default function ProjectSection() {
             stacks: ["/vite.svg", "/react.svg" ,"/tailwind.svg"],
         },
         {
-            title: "Kalku Fit",
-            desc: "a simple calorie calculator for your daily needs",
-            url: "https://kalku-fit.vercel.app",
-            stacks: ["/vite.svg", "/react.svg" ,"/tailwind.svg"],
+            title: "Splendor",
+            desc: "couldn’t find a simple version online, so I built one myself",
+            url: "https://tempatkamulatihan.vercel.app",
+            stacks: ["/react.svg", "/whiteNext.png", "/tailwind.svg"],
+        },
+        {
+            title: "WhereIsMyCursor",
+            desc: "my custom cursor library, pick yours",
+            url: "https://whereismycursor.vercel.app",
+            stacks: ["/vite.svg", "/react.svg", "/tailwind.svg"],
+        },
+        {
+            title: "Turen Indah Bangunan",
+            desc: "an intern project I’m proud of, a catalog system for a local building store",
+            url: "https://turen-indah-bangunan.vercel.app",
+            stacks: ["/vite.svg", "/react.svg" ,"/tailwind.svg", "/supabase.svg"],
         },
         {
             title: "Undangan",
@@ -27,16 +39,10 @@ export default function ProjectSection() {
             stacks: ["/vite.svg", "/react.svg" ,"/tailwind.svg"],
         },
         {
-            title: "Splendor",
-            desc: "couldn’t find a simple version online, so I built one myself",
-            url: "https://tempatkamulatihan.vercel.app",
-            stacks: ["/react.svg", "/whiteNext.png", "/tailwind.svg"],
-        },
-        {
-            title: "Turen Indah Bangunan",
-            desc: "an intern project I’m proud of, a catalog system for a local building store",
-            url: "https://turen-indah-bangunan.vercel.app",
-            stacks: ["/vite.svg", "/react.svg" ,"/tailwind.svg", "/supabase.svg"],
+            title: "Kalku Fit",
+            desc: "a simple calorie calculator for your daily needs",
+            url: "https://kalku-fit.vercel.app",
+            stacks: ["/vite.svg", "/react.svg" ,"/tailwind.svg"],
         },
         {
             title: "The Sacred Timeline",

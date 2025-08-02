@@ -28,8 +28,24 @@ export default function CustomCursor() {
     const cursor = cursorRef.current;
     const isMobile = window.matchMedia("(pointer: coarse)").matches;
 
+    if (cursor) {
+      cursor.style.display = "none";
+    }
+
+    let isCursorVisible = false;
+
     function moveCursor(e) {
       const s = state.current;
+
+      if (!isCursorVisible && cursor) {
+        cursor.style.display = "block";
+        isCursorVisible = true;
+        s.target.x = e.clientX;
+        s.target.y = e.clientY;
+        s.cursorState.x = e.clientX;
+        s.cursorState.y = e.clientY;
+      }
+
       s.mouse.x = e.clientX;
       s.mouse.y = e.clientY;
       if (!s.isHovering) {
@@ -103,7 +119,8 @@ export default function CustomCursor() {
 
     document.addEventListener("mousemove", moveCursor);
 
-    const hoverables = document.querySelectorAll("button, a, .pc-card, .pc-contact-btn, .select, input");
+    const hoverables = document.querySelectorAll(
+      ".target-btn, button, a, .pc-contact-btn, .select , input");
     hoverables.forEach((el) => {
       el.addEventListener("mouseenter", handleEnter);
       el.addEventListener("mouseleave", handleLeave);

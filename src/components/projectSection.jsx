@@ -50,6 +50,12 @@ export default function ProjectSection() {
             url: null,
             stacks: ["/vite.svg", "/react.svg" ,"/tailwind.svg"],
         },
+        {
+            title: "Twogether",
+            desc: "a twitter look-alike. where we share our moments, just between us",
+            url: null,
+            stacks: ["/vite.svg", "/react.svg" ,"/tailwind.svg", "/supabase.svg"],
+        },
     ];
 
     const [showCount, setShowCount] = useState(3);

@@ -24,6 +24,18 @@ export default function ExperienceSection() {
                 "Turen Indah Bangunan - Fullstack Developer Intern",
             ],
             period: ["July - August 2025"],
+            certificate: "https://drive.google.com/file/d/1ovgBwzPF0ps9C-5OnP3r0JHZ1x815bC_/view?usp=drive_link",
+        },
+        {
+            icon: (
+                <svg className="w-4 h-4 text-yellow-300" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                </svg>
+            ),
+            desc: [
+                "Hacksphere (President University) - Contestant",
+            ],
+            period: ["October 2025"],
         },
         {
             icon: (
@@ -76,13 +88,23 @@ export default function ExperienceSection() {
                                 {step.icon}
                             </span>
                             <h3 className="text-lg font-semibold text-white mb-1">
-                                {["Education", "Intern", "Freelance", "Next Journey"][idx]}
+                                {["Education", "Intern", "Competition", "Freelance", "Next Journey"][idx]}
                             </h3>
                             {step.desc.map((d, i) => (
                                 <div key={i} className="flex flex-col md:flex-row md:items-center md:justify-between">
                                     <div className="flex flex-col">
                                         <p className="text-sm text-gray-400">{d}</p>
-                                        {step.github && idx === 2 && i === 0 && (
+                                        {step.certificate && idx === 1 && i === 0 && (
+                                            <a
+                                                href={step.certificate}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-green-400 text-sm mb-2 self-start"
+                                            >
+                                                view certificate
+                                            </a>
+                                        )}
+                                        {step.github && idx === 3 && i === 0 && (
                                             <a
                                                 href={step.github}
                                                 target="_blank"

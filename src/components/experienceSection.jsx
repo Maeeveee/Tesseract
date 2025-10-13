@@ -1,4 +1,16 @@
+import { useState } from "react";
+
 export default function ExperienceSection() {
+    const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
+    const [showTooltip, setShowTooltip] = useState({ certificate: false, github: false });
+
+    const handleMouseMove = (e, type) => {
+        setTooltipPos({
+            x: e.clientX,
+            y: e.clientY,
+        });
+    };
+
     const steps = [
         {
             icon: (
@@ -95,24 +107,60 @@ export default function ExperienceSection() {
                                     <div className="flex flex-col">
                                         <p className="text-sm text-gray-400">{d}</p>
                                         {step.certificate && idx === 1 && i === 0 && (
-                                            <a
-                                                href={step.certificate}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="text-green-400 text-sm mb-2 self-start"
+                                            <div 
+                                                className="relative inline-block self-start"
+                                                onMouseMove={(e) => handleMouseMove(e, 'certificate')}
+                                                onMouseEnter={() => setShowTooltip({ ...showTooltip, certificate: true })}
+                                                onMouseLeave={() => setShowTooltip({ ...showTooltip, certificate: false })}
                                             >
-                                                view certificate
-                                            </a>
+                                                <a
+                                                    href={step.certificate}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-green-400 text-sm mb-2 transition-all duration-200"
+                                                >
+                                                    view certificate
+                                                </a>
+                                                {showTooltip.certificate && (
+                                                    <span 
+                                                        className="fixed bg-gray-800 text-white text-xs px-3 py-1.5 rounded-md whitespace-nowrap pointer-events-none z-50 shadow-lg border border-gray-700"
+                                                        style={{
+                                                            left: `${tooltipPos.x + 8}px`,
+                                                            top: `${tooltipPos.y + 8}px`,
+                                                        }}
+                                                    >
+                                                        Open certificate on Google Drive
+                                                    </span>
+                                                )}
+                                            </div>
                                         )}
                                         {step.github && idx === 3 && i === 0 && (
-                                            <a
-                                                href={step.github}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="text-blue-400 text-sm mb-2 self-start"
+                                            <div 
+                                                className="relative inline-block self-start"
+                                                onMouseMove={(e) => handleMouseMove(e, 'github')}
+                                                onMouseEnter={() => setShowTooltip({ ...showTooltip, github: true })}
+                                                onMouseLeave={() => setShowTooltip({ ...showTooltip, github: false })}
                                             >
-                                                visit his github
-                                            </a>
+                                                <a
+                                                    href={step.github}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-blue-400 text-sm mb-2 transition-all duration-200"
+                                                >
+                                                    visit his github
+                                                </a>
+                                                {showTooltip.github && (
+                                                    <span 
+                                                        className="fixed bg-gray-800 text-white text-xs px-3 py-1.5 rounded-md whitespace-nowrap pointer-events-none z-50 shadow-lg border border-gray-700"
+                                                        style={{
+                                                            left: `${tooltipPos.x + 8}px`,
+                                                            top: `${tooltipPos.y + 8}px`,
+                                                        }}
+                                                    >
+                                                        Visit Rio's GitHub profile
+                                                    </span>
+                                                )}
+                                            </div>
                                         )}
                                     </div>
                                     <span className="text-xs text-gray-200 md:ml-4 md:text-right mt-1 md:mt-0 min-w-[120px] mb-4">

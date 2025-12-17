@@ -48,7 +48,7 @@ export default function ProjectSection() {
             title: "Secret Message",
             desc: "Say something to me in secret",
             url: "https://textmeanon.vercel.app",
-            stacks: ["/whiteNext.png", "/react.svg" ,"/tailwind.svg","supabase.svg"],
+            stacks: ["/whiteNext.png", "/react.svg" ,"/tailwind.svg","/supabase.svg"],
         },
         {
             title: "The Sacred Timeline",

@@ -34,8 +34,9 @@ export default function ExperienceSection() {
             ),
             desc: [
                 "Turen Indah Bangunan - Fullstack Developer Intern",
+                "Timedoor Indonesia - Frontend Developer Intern",
             ],
-            period: ["July - August 2025"],
+            period: ["July - August 2025", "January 2026 - Present"],
             certificate: "https://drive.google.com/file/d/1ovgBwzPF0ps9C-5OnP3r0JHZ1x815bC_/view?usp=drive_link",
         },
         {

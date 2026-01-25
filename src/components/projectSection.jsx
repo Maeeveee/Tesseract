@@ -70,7 +70,7 @@ export default function ProjectSection() {
         },
         {
             title: "Twogether",
-            desc: "a twitter look-alike. where we share our moments, just between us",
+            desc: "a twitter look-alike. where we share our moments, just between me and her",
             url: null,
             stacks: ["/vite.svg", "/react.svg", "/tailwind.svg", "/supabase.svg"],
         },

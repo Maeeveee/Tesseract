@@ -6,7 +6,31 @@ export default function ProjectSection() {
             title: "Tesseract",
             desc: "you’ve been here before, haven’t you?",
             url: "https://Tesseract-maeve.vercel.app",
-            stacks: ["/vite.svg", "/react.svg" ,"/tailwind.svg"],
+            stacks: ["/vite.svg", "/react.svg", "/tailwind.svg"],
+        },
+        {
+            title: "Turen Indah Bangunan",
+            desc: "an intern project I’m proud of, a catalog system for a local building store",
+            url: "https://turen-indah-bangunan.vercel.app",
+            stacks: ["/vite.svg", "/react.svg", "/tailwind.svg", "/supabase.svg"],
+        },
+        {
+            title: "Storytime",
+            desc: "building a storytelling website and this is also my first intern training project",
+            url: "https://storytime-intern.vercel.app",
+            stacks: ["/vue.svg", "/nuxt.svg", "/scss.svg", "/laravel.svg"],
+        },
+        {
+            title: "Me and Thee",
+            desc: "a landingpage for my mobile couple app and this isnt finish yet",
+            url: "https://meandthee.vercel.app",
+            stacks: ["/whiteNext.png", "/react.svg", "/tailwind.svg", "/supabase.svg"],
+        },
+        {
+            title: "Secret Message",
+            desc: "Say something to me in secret",
+            url: "https://textmeanon.vercel.app",
+            stacks: ["/whiteNext.png", "/react.svg", "/tailwind.svg", "/supabase.svg"],
         },
         {
             title: "Splendor",
@@ -21,12 +45,6 @@ export default function ProjectSection() {
             stacks: ["/vite.svg", "/react.svg", "/tailwind.svg"],
         },
         {
-            title: "Turen Indah Bangunan",
-            desc: "an intern project I’m proud of, a catalog system for a local building store",
-            url: "https://turen-indah-bangunan.vercel.app",
-            stacks: ["/vite.svg", "/react.svg" ,"/tailwind.svg", "/supabase.svg"],
-        },
-        {
             title: "Undangan",
             desc: "try to ask ur friend hangout with this",
             url: "https://undangan-buat-kamu.vercel.app",
@@ -36,31 +54,25 @@ export default function ProjectSection() {
             title: "kertas Batu Gunting",
             desc: "built this during some free time at my internship",
             url: "https://kertasbatugunting.vercel.app",
-            stacks: ["/vite.svg", "/react.svg" ,"/tailwind.svg"],
+            stacks: ["/vite.svg", "/react.svg", "/tailwind.svg"],
         },
         {
             title: "Kalku Fit",
             desc: "a simple calorie calculator for your daily needs",
             url: "https://kalku-fit.vercel.app",
-            stacks: ["/vite.svg", "/react.svg" ,"/tailwind.svg"],
-        },
-        {
-            title: "Secret Message",
-            desc: "Say something to me in secret",
-            url: "https://textmeanon.vercel.app",
-            stacks: ["/whiteNext.png", "/react.svg" ,"/tailwind.svg","/supabase.svg"],
+            stacks: ["/vite.svg", "/react.svg", "/tailwind.svg"],
         },
         {
             title: "The Sacred Timeline",
             desc: "this one is classified, i cant tell u",
             url: null,
-            stacks: ["/vite.svg", "/react.svg" ,"/tailwind.svg"],
+            stacks: ["/vite.svg", "/react.svg", "/tailwind.svg"],
         },
         {
             title: "Twogether",
             desc: "a twitter look-alike. where we share our moments, just between us",
             url: null,
-            stacks: ["/vite.svg", "/react.svg" ,"/tailwind.svg", "/supabase.svg"],
+            stacks: ["/vite.svg", "/react.svg", "/tailwind.svg", "/supabase.svg"],
         },
     ];
 
